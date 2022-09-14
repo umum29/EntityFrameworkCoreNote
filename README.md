@@ -15,8 +15,8 @@ Install the following 4 packages in Nuget:
 1-1: define required “Model class” first 
 
 1-2: create “DatabaseContext” class 
-In terminal, cd project folder, and type the following two commands to initialize table in SqlServer:
-dotnet ef migrations add initialcreate 
+In terminal, cd project folder, and type the following two commands to initialize table in SqlServer:<br />
+dotnet ef migrations add initialcreate <br />
 dotnet ef database update 
 
 1-3: create “Api Controller” with “Model class” 
