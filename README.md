@@ -9,7 +9,7 @@ Step 1: Create WebApi project with .NetCore 6
 Install the following 4 packages in Nuget: 
 <br />Microsoft.EntityFrameworkCore 6.0.8 
 <br />Microsoft.EntityFrameworkCore.Tools 6.0.8 
-<br />Microsoft.EntityFrameworkCore.Design 6.0.8 
+<br />Microsoft.EntityFrameworkCore.Design 6.0.8 (Optional! In fact, when using "Tools", it will include "Design" too)
 <br />Microsoft.EntityFrameworkCore.SqlServer 6.0.8 
 <br />
 p.s: If you want "Package Manage Console" commands then import EFCore.Tools.<br /> 
