@@ -18,12 +18,7 @@ If you want both then only import EFCore.Tools<br />
 
 1-1: define required “Model class” first 
 
-1-2: create “DatabaseContext” class 
-In terminal, cd project folder, and type the following two commands to initialize table in SqlServer:<br />
-dotnet ef migrations add initialcreate <br />
-dotnet ef database update 
-
-1-3: create “Api Controller” with “Model class” 
+1-2: create “DatabaseContext” class, and set up the connection string/settings 
 p.s a: the sql connection string in appsetting.json: <br />
 "ConnectionStrings": { 
     "DefaultConnection": "Data Source=localhost,1401;Persist Security Info=True;Initial Catalog=superherodb;User Id=sa;Password=<putyourpasswordhere>" 
@@ -35,10 +30,21 @@ builder.Services.AddDbContext<DataContext>(options=>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")); 
 }); 
 
-p.s. b: set up CORS in program.cs <br />
+p.s. b: set up CORS in program.cs (optional for providing access for external use, like Angular frontend)<br />
 builder.Services.AddCors(options=>options.AddPolicy(name: "SuperHeroOrigins", 
     policy => 
     { 
         policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader(); 
     })); 
 app.UseCors("SuperHeroOrigins"); 
+
+
+1-3:
+After setting up the connection string and program.cs, start to create DB migration data:
+In terminal, cd project folder, and type the following two commands to initialize table in SqlServer:<br />
+dotnet ef migrations add initialcreate <br />
+dotnet ef database update 
+
+
+1-4: create “Api Controller” with “Model class” 
+
