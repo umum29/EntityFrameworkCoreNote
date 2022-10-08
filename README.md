@@ -25,7 +25,7 @@ p.s a: the sql connection string in appsetting.json: <br />
   }, 
 
 Then, apply this in program.cs <br />
-builder.Services.AddDbContext<DataContext>(options=> 
+builder.Services.AddDbContext\<DataContext\>(options=> 
 { 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")); 
 }); 
