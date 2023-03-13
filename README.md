@@ -23,6 +23,10 @@ p.s a: the sql connection string in appsetting.json: <br />
 "ConnectionStrings": { 
     "DefaultConnection": "Data Source=localhost,1401;Persist Security Info=True;Initial Catalog=superherodb;User Id=sa;Password=<putyourpasswordhere>" 
   }, 
+  
+2023-03-13 update:
+if it shows "remote server certificate error", please add "TrustServerCertificate=True" in above connection stringsetting.
+ 
 
 Then, apply this in program.cs <br />
 builder.Services.AddDbContext\<DataContext\>(options=> 
