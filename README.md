@@ -61,5 +61,7 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet add package --version 1.1.0-msbuild3-final Microsoft.EntityFrameworkCore.Tools 
 dotnet restore      
-dotnet run 
+dotnet run
+//update local PC's Entity Framework Core tool version
+dotnet tool update --global dotnet-ef
 ```
