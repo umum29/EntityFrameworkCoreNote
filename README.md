@@ -61,6 +61,7 @@ dotnet ef database update
 if you are using VSCode, you may need to use terminal(command line) to new ApiController, like
 ```
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet tool install -g dotnet-aspnet-codegenerator
 dotnet tool update -g dotnet-aspnet-codegenerator
 dotnet aspnet-codegenerator controller -name CustomerController -async -api -m Customer -dc ./Data/ApplicationDataContext -outDir Controllers
