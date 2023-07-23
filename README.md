@@ -60,6 +60,7 @@ dotnet ef database update
 1-4: create “Api Controller” with “Model class”.    
 if you are using VSCode, you may need to use terminal(command line) to new ApiController, like
 ```
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet tool install -g dotnet-aspnet-codegenerator
 dotnet tool update -g dotnet-aspnet-codegenerator
 dotnet aspnet-codegenerator controller -name CustomerController -async -api -m Customer -dc ./Data/ApplicationDataContext -outDir Controllers
