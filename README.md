@@ -57,7 +57,8 @@ dotnet ef migrations add initialcreate
 dotnet ef database update 
 ```
 
-1-4: create “Api Controller” with “Model class” 
+1-4: create “Api Controller” with “Model class”.    
+if you are using VSCode, you may need to use terminal(command line) to new ApiController, like
 ```
 dotnet tool install -g dotnet-aspnet-codegenerator
 dotnet tool update -g dotnet-aspnet-codegenerator
