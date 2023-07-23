@@ -52,3 +52,14 @@ dotnet ef database update
 
 1-4: create “Api Controller” with “Model class” 
 
+
+# Extra points: dotnet command(for VSCode)
+```
+dotnet new webapi -n MyWebAPICore
+dotnet new mvc  
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package --version 1.1.0-msbuild3-final Microsoft.EntityFrameworkCore.Tools 
+dotnet restore      
+dotnet run 
+```
