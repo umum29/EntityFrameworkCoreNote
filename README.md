@@ -86,3 +86,5 @@ As a rule of thumb, you should add a foreign key on the **child table** referenc
 You can identify the **parent table** by asking **which table can exists on its own without the presence of the other table**. In your case WorkingHours can exists without WorkingHoursDetails (but not the other way around, so WorkingHours appears to be the parent table.
 
 Alternatively you can look at the data flow when inserting new records. If both tables are empty, you should have to **insert a row in WorkingHours first** and then a record in WorkingHoursDetail. This makes WorkingHours the parent table and therefore the foreign key should be added on WorkingHoursDetail referencing WorkingHours.
+## Decide Foreign Key under one to one    
+If both tables can exist indepenently, You can put Foreign key to either one.(but not put it at both tables) 
