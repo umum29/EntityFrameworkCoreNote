@@ -88,7 +88,7 @@ You can identify the **parent table** by asking **which table can exists on its 
 Alternatively you can look at the data flow when inserting new records. If both tables are empty, you should have to **insert a row in WorkingHours first** and then a record in WorkingHoursDetail. This makes WorkingHours the parent table and therefore the foreign key should be added on WorkingHoursDetail referencing WorkingHours.
 ## Decide Foreign Key under one to one relation   
 If both tables can exist indepenently, You can put Foreign key to either one.(but not put it at both tables)    
-## Decide Foreign Key under one to many relation    
+## Decide Foreign Key under one(or Zero) to many relation    
 The foreign key goes on the **"many"** side.    
 For example, if a sales_order is associated with **at most one** customer, and **a customer can have zero, one or more sales_order**
 Then we put customer_id in the **sales_order**(many side) table, as a reference to the (unique) id column in customer table.
