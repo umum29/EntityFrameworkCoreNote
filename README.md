@@ -91,4 +91,6 @@ If both tables can exist indepenently, You can put Foreign key to either one.(bu
 ## Decide Foreign Key under one(or Zero) to many relation    
 The foreign key goes on the **"many"** side.    
 For example, if a sales_order is associated with **at most one** customer, and **a customer can have zero, one or more sales_order**
-Then we put customer_id in the **sales_order**(many side) table, as a reference to the (unique) id column in customer table.
+Then we put customer_id in the **sales_order**(many side) table, as a reference to the (unique) id column in customer table.    
+
+Please reference **Student.cs** content to make **Foreign Key setting** work in Entity Framework Core.
