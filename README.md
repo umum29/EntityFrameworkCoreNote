@@ -103,4 +103,5 @@ https://github.com/teddysmithdev/pokemon-review-api/blob/master/PokemonReviewApp
 ### Note for designing WebApi
 we should **not** directly expose Entity Framework(_DbContext) to WebApi endpoint;    
 instead, use **Repository/Serivce layer** & **DTO** to transform the DTO request to model entity class.    
-This way will also help that clients **don't need to provide the whole objects** when calling WebApi.
+This way will also help that clients **don't need to provide the whole objects** when calling WebApi.    
+https://github.com/teddysmithdev/pokemon-review-api/tree/master/PokemonReviewApp is angood example for reference.
