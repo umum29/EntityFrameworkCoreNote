@@ -99,3 +99,8 @@ https://github.com/teddysmithdev/pokemon-review-api/blob/master/PokemonReviewApp
 1.  For many to many, we need to create a "join table" for two one-to-many relation, and also set up the relation in OnModelCreating method of dbContext.cs.
 2.  In WebApi, for posting(creating) data, we have to create new data in **"join table"**, instead of a individual table.
 3.  In Webapi perspective, you can only insert(create) one data at time, and that's why **"_context.Owners.Where(a => a.Id == ownerId).FirstOrDefault();"** prepare the data before saving into DB.
+
+### Note for designing WebApi
+we should **not** directly expose Entity Framework(_DbContext) to WebApi endpoint;    
+instead, use **Repository/Serivce layer** & **DTO** to transform the DTO request to model entity class.    
+This way will also help that clients **don't need to provide the whole objects** when calling WebApi.
