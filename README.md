@@ -94,3 +94,8 @@ For example, if a sales_order is associated with **at most one** customer, and *
 Then we put customer_id in the **sales_order**(many side) table, as a reference to the (unique) id column in customer table.    
 
 Please reference **Student.cs** content to make **Foreign Key setting** work in Entity Framework Core.
+## Decide many-to-many relation
+https://github.com/teddysmithdev/pokemon-review-api/blob/master/PokemonReviewApp/Repository/PokemonRepository.cs shows:    
+1.  For many to many, we need to create a "join table" for two one-to-many relation, and also set up the relation in OnModelCreating method of dbContext.cs.
+2.  In WebApi, for posting(creating) data, we have to create new data in **"join table"**, instead of a individual table.
+3.  In Webapi perspective, you can only insert(create) one data at time, and that's why **"_context.Owners.Where(a => a.Id == ownerId).FirstOrDefault();"** prepare the data before saving into DB.
