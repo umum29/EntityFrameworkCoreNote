@@ -108,4 +108,5 @@ https://github.com/teddysmithdev/pokemon-review-api/tree/master/PokemonReviewApp
 
 ### fix err_ssl_version_or_cipher_mismatch
 Once the browser shows "err_ssl_version_or_cipher_mismatch", please add **<UseAppHost>false</UseAppHost>** in **<PropertyGroup>** of .csproj file.    
+This is the notarization issue on OS X. This is a known issue and we are working on a fix.(issues with certificates on macOS Catalina)
 
