@@ -105,3 +105,7 @@ we should **not** directly expose Entity Framework(_DbContext) to WebApi endpoin
 instead, use **Repository/Serivce layer** & **DTO** to transform the DTO request to model entity class.    
 This way will also help that clients **don't need to provide the whole objects** when calling WebApi.    
 https://github.com/teddysmithdev/pokemon-review-api/tree/master/PokemonReviewApp is angood example for reference.
+
+### fix err_ssl_version_or_cipher_mismatch
+Once the browser shows "err_ssl_version_or_cipher_mismatch", please add **<UseAppHost>false</UseAppHost>** in **<PropertyGroup>** of .csproj file.    
+
