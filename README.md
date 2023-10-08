@@ -28,6 +28,15 @@ p.s a: the sql connection string in appsetting.json:
     "DefaultConnection": "Data Source=localhost,1401;Persist Security Info=True;Initial Catalog=superherodb;User Id=sa;Password=<putyourpasswordhere>" 
   }, 
 ```
+1-3(if using Sqlite instead of Sql server)
+```
+/* if using Sqllite, please remember to install package Microsoft.EntityFrameworkCore.Sqlite first
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlite("Data Source=Product.db");
+});
+```
+
 2023-03-13 update:
 if it shows "remote server certificate error", please add "TrustServerCertificate=True" in above connection stringsetting.
  
