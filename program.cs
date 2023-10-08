@@ -13,6 +13,12 @@ builder.Services.AddDbContext<DataContext>(options=>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+/* if using Sqllite, please remember to install package Microsoft.EntityFrameworkCore.Sqlite first
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlite("Data Source=Product.db");
+});
+*/
 builder.Services.AddCors(options=>options.AddPolicy(name: "SuperHeroOrigins",
     policy =>
     {
